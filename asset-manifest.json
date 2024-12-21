@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Investigative-article-website/static/css/main.4a38cfbe.css",
+    "main.js": "/Investigative-article-website/static/js/main.6898c089.js",
+    "static/js/488.e75445ad.chunk.js": "/Investigative-article-website/static/js/488.e75445ad.chunk.js",
+    "static/media/pink.png": "/Investigative-article-website/static/media/pink.1f0367734505529d040e.png",
+    "static/media/building.jpg": "/Investigative-article-website/static/media/building.2b8ba5c76e210ff551c8.jpg",
+    "static/media/author.png": "/Investigative-article-website/static/media/author.b688ca4b735b53e68321.png",
+    "static/media/image.png": "/Investigative-article-website/static/media/image.32808b8c661e87147338.png",
+    "static/media/blue1.1.png": "/Investigative-article-website/static/media/blue1.1.aad2fe4cf96f62858f75.png",
+    "static/media/logo.svg": "/Investigative-article-website/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Investigative-article-website/index.html",
+    "static/media/menuicon.svg": "/Investigative-article-website/static/media/menuicon.0b0efddcea682f9bf50bdb9541e3245b.svg",
+    "main.4a38cfbe.css.map": "/Investigative-article-website/static/css/main.4a38cfbe.css.map",
+    "main.6898c089.js.map": "/Investigative-article-website/static/js/main.6898c089.js.map",
+    "488.e75445ad.chunk.js.map": "/Investigative-article-website/static/js/488.e75445ad.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a38cfbe.css",
+    "static/js/main.6898c089.js"
+  ]
+}
