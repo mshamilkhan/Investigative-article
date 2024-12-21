@@ -1,0 +1,63 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    padding: 4rem 0 0 0 ;
+    height: auto;
+    margin-top: 10rem ;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top ,  #ab7104ca, #ff890334);
+}
+.logobox{
+width: 80%;
+padding: 2rem;
+display: flex;
+justify-content: center;
+align-items: center;
+/* background-color: beige; */
+}
+.logobox img{
+width: 20rem;
+}
+
+.main{
+    display: flex;
+    width: 100%;
+    z-index: 2;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    flex-wrap: wrap;
+    /* background-color: red; */
+}
+.leftbox{
+   min-width: 20rem;
+   max-width: 50rem;
+   margin: 2rem;
+}
+
+.box1 , .box2{
+    margin: 2rem 0 2rem 0;
+}
+.rightbox li{
+    font-size: 1rem;
+    margin: 1rem;
+  
+}
+.rightbox{
+    min-width: 20rem;
+    max-width: 50rem;
+    
+}
+.bottom{
+    width: 99.9%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgb(229, 217, 200);
+    height: 5rem;
+    color: white;
+    
+}

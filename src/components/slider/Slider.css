@@ -1,0 +1,27 @@
+@import url("../../assets/color.css");
+
+
+
+.swiper-button-next, .swiper-button-prev {
+    color: white; /* Set the desired color for the arrows */
+    font-size: 20px; /* Adjust size if needed */
+    /* right: -10px; */
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    color: var(--yellow); /* Optional: Change color on hover */
+}
+
+@media (max-width:1000px){
+    
+.swiper-button-next, .swiper-button-prev {
+    color: var(--yellow);
+    font-size: 20px; 
+    display: none;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    color: var(--yellow);
+display: none;
+}
+}

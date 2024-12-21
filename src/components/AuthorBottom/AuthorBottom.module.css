@@ -1,0 +1,37 @@
+@import url("../../assets/color.css");
+
+
+.topbox{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* background-color: red; */
+    color: rgb(147, 147, 147);
+}
+
+.inside{
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   padding-top: 2rem;
+   border-top: 5px solid var(--yellow);
+}
+.imgbox img{
+    width: 5rem;
+    height: auto;
+    border-radius: 50%;
+}
+.imgbox{
+    margin-right: 2rem;
+}
+.detail h3{
+    color: var(--yellow);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+.detail{
+    width: 40rem;
+}

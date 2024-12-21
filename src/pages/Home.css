@@ -1,0 +1,46 @@
+.sliderbox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /* height: auto; */
+    /* background-color: red; */
+}
+
+.inside-container{
+    width: 80%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.categorydiv{
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-section{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    
+    display: flex;
+}
+.news{
+    width: 100%;
+    /* background-color: blue; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.btnbox{
+    padding: 2rem;
+}
