@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Investigative-article/static/css/main.4a38cfbe.css",
-    "main.js": "/Investigative-article/static/js/main.41c221f2.js",
-    "static/js/488.e75445ad.chunk.js": "/Investigative-article/static/js/488.e75445ad.chunk.js",
-    "static/media/pink.png": "/Investigative-article/static/media/pink.1f0367734505529d040e.png",
-    "static/media/building.jpg": "/Investigative-article/static/media/building.2b8ba5c76e210ff551c8.jpg",
-    "static/media/author.png": "/Investigative-article/static/media/author.b688ca4b735b53e68321.png",
-    "static/media/image.png": "/Investigative-article/static/media/image.32808b8c661e87147338.png",
-    "static/media/blue1.1.png": "/Investigative-article/static/media/blue1.1.aad2fe4cf96f62858f75.png",
-    "static/media/logo.svg": "/Investigative-article/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/Investigative-article/index.html",
-    "static/media/menuicon.svg": "/Investigative-article/static/media/menuicon.0b0efddcea682f9bf50bdb9541e3245b.svg",
-    "main.4a38cfbe.css.map": "/Investigative-article/static/css/main.4a38cfbe.css.map",
-    "main.41c221f2.js.map": "/Investigative-article/static/js/main.41c221f2.js.map",
-    "488.e75445ad.chunk.js.map": "/Investigative-article/static/js/488.e75445ad.chunk.js.map"
+    "main.css": "./static/css/main.4a38cfbe.css",
+    "main.js": "./static/js/main.2079fecf.js",
+    "static/js/488.e75445ad.chunk.js": "./static/js/488.e75445ad.chunk.js",
+    "static/media/pink.png": "./static/media/pink.1f0367734505529d040e.png",
+    "static/media/building.jpg": "./static/media/building.2b8ba5c76e210ff551c8.jpg",
+    "static/media/author.png": "./static/media/author.b688ca4b735b53e68321.png",
+    "static/media/image.png": "./static/media/image.32808b8c661e87147338.png",
+    "static/media/blue1.1.png": "./static/media/blue1.1.aad2fe4cf96f62858f75.png",
+    "static/media/logo.svg": "./static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "./index.html",
+    "static/media/menuicon.svg": "./static/media/menuicon.0b0efddcea682f9bf50bdb9541e3245b.svg",
+    "main.4a38cfbe.css.map": "./static/css/main.4a38cfbe.css.map",
+    "main.2079fecf.js.map": "./static/js/main.2079fecf.js.map",
+    "488.e75445ad.chunk.js.map": "./static/js/488.e75445ad.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4a38cfbe.css",
-    "static/js/main.41c221f2.js"
+    "static/js/main.2079fecf.js"
   ]
 }
