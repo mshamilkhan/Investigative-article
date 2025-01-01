@@ -35,3 +35,17 @@
 .detail{
     width: 40rem;
 }
+
+@media (max-width:800px){
+    .detail{
+        width: 20rem;
+        
+    }
+    .inside{
+        flex-direction: column;
+        text-align: center;
+    }
+    .imgbox{
+        margin-right: 0;
+    }
+}

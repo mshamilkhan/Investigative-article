@@ -3,12 +3,13 @@ import './App.css';
 import Navbar from './components/navbar/Navbar';
 import DesktopMenu from './components/desktopMenu/DesktopMenu';
 import Home from './pages/Home';
-import {createBrowserRouter, BrowserRouter, RouterProvider, useLocation} from "react-router-dom"
+import {createBrowserRouter, BrowserRouter, RouterProvider, useLocation, HashRouter} from "react-router-dom"
 import AnimatedRoutes from './components/AnimatedRoutes/AnimatedRoutes';
 
 
 
 function App() {
+  
   // const location = useLocation();
   // const router = createBrowserRouter([
   //   {

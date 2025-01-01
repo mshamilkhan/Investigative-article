@@ -1,0 +1,54 @@
+.main{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+textarea{
+    width: 80%;
+    min-height: 90vh;
+    background-color: transparent;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    color: rgb(212, 212, 212);
+}
+textarea::placeholder{
+    color: rgb(200, 200, 200);
+}
+
+textarea:focus{
+outline: none;
+}
+.main input[name="title"]{
+    width: 80%;
+    margin-bottom: 2rem;
+    color: white;
+    background-color:transparent;
+    border: none;
+    font-weight: bold;
+    font-size: large;
+    border-bottom: 1px solid white;
+}
+.main input:focus {
+    outline: none;
+    box-shadow: none;
+    color: none;
+  }
+  .radio {
+    background-color: rgb(37, 37, 37);
+   width: 80%;
+   display: flex;
+   margin-bottom: 2rem;
+   border-radius: 10px;
+   justify-content: center;
+   align-items: center;
+   padding: 2rem;
+  }
+  .radio label{
+    margin-right: 2rem;
+  }

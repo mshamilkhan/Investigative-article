@@ -1,0 +1,12 @@
+.login{
+    display: flex;
+    margin: auto;
+    color: white;
+    transform: translate(0, 50%);
+    flex-direction: column;
+    width: 50rem;
+}
+input{
+    padding: 1rem;
+   
+}

@@ -47,5 +47,12 @@
     display: flex;
     align-items: center;
 }
-/* .para1 p{
-} */
+
+@media (max-width:900px){
+    .articlepicture{
+        width: 100%;
+    }
+    .para1{
+        width: 95%;
+    }
+}

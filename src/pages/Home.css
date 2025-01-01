@@ -44,3 +44,9 @@
 .btnbox{
     padding: 2rem;
 }
+
+@media (max-width:1000px){
+    .inside-container{
+        width: 100%;
+    }
+}

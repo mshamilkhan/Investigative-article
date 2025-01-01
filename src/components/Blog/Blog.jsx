@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import blog from './Blog.module.css';
 import Navbar from '../navbar/Navbar';
 import Footer from '../Footer/Footer';
@@ -8,13 +8,56 @@ import CenterHeading from '../CenterHeading/CenterHeading';
 import WhiteHeading from '../WhiteHeading/WhiteHeading';
 import hero from '../../assets/images/image.png';
 import AuthorBottom from '../AuthorBottom/AuthorBottom';
-
+import { useLoaderData } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Slider from '../slider/Slider';
 import Scroll from '../Scroll/Scroll';
+import { useLocation } from 'react-router-dom';
+import axios from 'axios';
+
+
+
+
+
 
 
 export default function Blog() {
+  const location = useLocation();
+  console.log(location)
+  const queryParams = new URLSearchParams(location.search);
+  const id = queryParams.get('id');
+  console.log(id)
+
+
+const [blogData, setBlogData] = useState({
+  title: '',
+  content: "",
+  image: "",
+})//TODO
+
+
+const showBlog = async () => {
+  try {
+    const res = await axios.get(`${process.env.REACT_APP_AXIOS_LINK}/show-blog`, {
+      params: { id },
+    });
+    setBlogData({
+      title: res.data.title,
+      content: res.data.content,
+      image: res.data.image.filename,
+    });
+    console.log(res.data);
+  } catch (err) {
+    console.error('Error fetching blog data:', err);
+  }
+};
+useEffect(()=>{
+showBlog();
+}, [])
+
+
+
+
   const textContent = `
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates necessitatibus perferendis optio in, quia quisquam delectus aperiam repellat temporibus nisi, totam quibusdam repellendus animi obcaecati sapiente tempora eligendi libero sint.
     Nisi quis at consequatur consequuntur autem eius assumenda, praesentium sequi, quaerat hic non reiciendis asperiores excepturi, voluptates nobis eaque deserunt quam? Et velit mollitia quaerat consequuntur! Dolorem vel cupiditate blanditiis.
@@ -40,13 +83,13 @@ export default function Blog() {
     
       <Navbar parameter="/menuopen" menuText="Menu" />
       <AuthorTop image={author} name="Mohammad Shamil Khan" date="December 12, 2024" />
-      <WhiteHeading heading="Article 1 Heading Here" />
+      <WhiteHeading heading={blogData.title} />
       <div className={blog.box112}>
         <div className={blog.articlepicture}>
-          <img src={hero} alt="Hero" />
+          <img src={`images/${blogData.image}`} alt="Hero" />
         </div>
         <div className={blog.para1}>
-          <p>{textContent}</p>
+          <p>{blogData.content}</p>
         </div>
 
 
