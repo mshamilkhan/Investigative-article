@@ -45,11 +45,33 @@ width: 20rem;
     margin: 1rem;
   
 }
+.quickLinks li{
+    font-size: 1rem;
+    margin: 1rem;
+  
+}
 .rightbox{
     min-width: 20rem;
     max-width: 50rem;
     
 }
+.quickLinks{
+    /* background-color: red; */
+    /* min-width: 20rem; */
+    width: 100%;
+    
+}
+.main{
+    flex-direction: column;
+}
+ul{
+    display: flex;
+}
+
+
+
+
+
 .bottom{
     width: 99.9%;
     display: flex;
@@ -60,4 +82,7 @@ width: 20rem;
     height: 5rem;
     color: white;
     
+}
+.link{
+    text-decoration: none;
 }

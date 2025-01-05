@@ -8,6 +8,7 @@ import Blog from '../Blog/Blog';
 import Login from '../../pages/login/Login';
 import CreateBlog from '../../pages/CreateBlog/CreateBlog';
 import AllData from '../../pages/AllData/AllData';
+import AboutUs from '../../pages/AboutUs/AboutUs';
 
 export default function AnimatedRoutes() {
 
@@ -36,6 +37,7 @@ export default function AnimatedRoutes() {
         <Route path="/login" element={<Login/>} />
         <Route path="/create-blog" element={<CreateBlog/>} />
         <Route path="/all-data" element={<AllData/>} />
+        <Route path="/about-us" element={<AboutUs/>} />
 
     </Routes>  
     </AnimatePresence>

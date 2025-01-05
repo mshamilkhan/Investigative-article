@@ -24,9 +24,11 @@ export default function DesktopMenu() {
       >
 
         <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
+          <Link to="/" className={s.link}><li>Home</li></Link>
+          <Link to="/all-data" className={s.link}><li>Blogs</li></Link>
+          {/* <Link to="/contact-us" className={s.link}><li>Contact Us</li></Link> */}
+          <Link to="/about-us" className={s.link}><li>About Us</li></Link>
+         
 
         </ul>
       </motion.div>

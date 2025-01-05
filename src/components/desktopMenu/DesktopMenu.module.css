@@ -2,8 +2,9 @@
 
 li{
     color: white;
-    font-size: clamp(5rem, 7vw, 7rem);
+    font-size: clamp(5rem, 5vw, 7rem);
     list-style: none;
+    text-decoration: none;
     margin: 2rem;
     transition: all 0.2s ease-in;
 }
@@ -18,5 +19,8 @@ color:var(--yellow);
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* transform: translate(0, 25%); */
+}
+
+.link {
+    text-decoration: none;
 }
