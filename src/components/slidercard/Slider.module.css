@@ -10,7 +10,7 @@
 }
 .mainbox img{
     width: 100%;
-    height:100%;
+    height:35rem;
     object-fit: cover;
     border-radius: 20px;
     transition: all 0.2s ease-in;

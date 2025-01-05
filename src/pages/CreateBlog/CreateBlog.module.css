@@ -7,15 +7,18 @@
     align-items: center;
     justify-content: center;
     margin-top: 5rem;
+    /* background-color: red; */
 }
 textarea{
-    width: 80%;
-    min-height: 90vh;
+    width: 85%;
+    min-height: 50vh;
+  
     background-color: transparent;
     border: none;
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
     color: rgb(212, 212, 212);
+    /* background-color: red; */
 }
 textarea::placeholder{
     color: rgb(200, 200, 200);
@@ -51,4 +54,38 @@ outline: none;
   }
   .radio label{
     margin-right: 2rem;
+    /* background-color: red; */
+  }
+  .author {
+    background-color: rgb(37, 37, 37);
+   width: 80%;
+   display: flex;
+   margin-bottom: 2rem;
+   border-radius: 10px;
+   justify-content: center;
+   align-items: center;
+   padding: 2rem;
+  }
+  .author label{
+    margin-right: 2rem;
+    /* background-color: red; */
+  }
+.author input[type="text"]{
+    margin: 0 2rem 0 1rem;
+    border-radius: 10px;
+    border: none;
+}
+  .btnbox{
+    padding: 1rem;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }

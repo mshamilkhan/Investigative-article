@@ -6,7 +6,7 @@ import NewsCard from '../NewsCard/NewsCard'
 
 
 
-export default function Scroll() {
+export default function Scroll({scrollData = [], onClick}) {
     const scrollRef = useRef(null);
 
   useEffect(() => {
@@ -43,23 +43,26 @@ export default function Scroll() {
   return (
     <div className="scrollable-cards-container" ref={scrollRef}>
       <div className="scrollable-cards">
-        {cards.map((card, index) => (
+        {scrollData.map((card, index) => (
+          <NewsCard
+          
+            key={index}
+            image={`/images/${card.images[0].filename}`}
+            heading={card.title}
+            onClick={onClick}
+            value={card.title}
+          />
+        ))}
+        {scrollData.map((card, index) => (
           <NewsCard
             key={index}
-            image={card.image}
-            heading={card.heading}
-            para={card.para}
+            image={`/images/${card.images[0].filename}`}
+            heading={card.title}
+           onClick={onClick}
+           value={card.title}
           />
         ))}
-        {/* Duplicate cards for seamless scrolling */}
-        {cards.map((card, index) => (
-          <NewsCard
-            key={`duplicate-${index}`}
-            image={card.image}
-            heading={card.heading}
-            para={card.para}
-          />
-        ))}
+       
       </div>
     </div>
   );

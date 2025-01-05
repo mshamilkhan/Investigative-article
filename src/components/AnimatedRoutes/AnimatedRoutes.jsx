@@ -7,6 +7,7 @@ import {AnimatePresence} from "framer-motion"
 import Blog from '../Blog/Blog';
 import Login from '../../pages/login/Login';
 import CreateBlog from '../../pages/CreateBlog/CreateBlog';
+import AllData from '../../pages/AllData/AllData';
 
 export default function AnimatedRoutes() {
 
@@ -34,6 +35,7 @@ export default function AnimatedRoutes() {
         <Route path="/menuopen" element={<DesktopMenu/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/create-blog" element={<CreateBlog/>} />
+        <Route path="/all-data" element={<AllData/>} />
 
     </Routes>  
     </AnimatePresence>

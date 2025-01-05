@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
 import TextOnImage from "../components/textOnImage/TextOnImage";
@@ -22,9 +22,9 @@ export default function Home() {
   
 const navigate = useNavigate();
   const [blog, setBlog] = useState([]);
-
+const [slider, setSlider] = useState([]);
   const submit = async (e) => {
-    const option = e.target.value;
+    const option = e.target.value || "all";
     try {
       const { data } = await axios.get(`${process.env.REACT_APP_AXIOS_LINK}/fetch-data`, {
         params: { option },
@@ -36,10 +36,10 @@ const navigate = useNavigate();
   };
 
 
-const openBlog = (e)=>{
+const openBlog = (e, value)=>{
   try{
 
-    let link = e.target.getAttribute('value')
+    let link = e.target.getAttribute('value') || value
    console.log(link)
    axios.get(`${process.env.REACT_APP_AXIOS_LINK}/blog`,{
     params: {title:link}
@@ -56,6 +56,22 @@ const openBlog = (e)=>{
     console.log("Error while redirecting to the blog")
   }
 }
+
+const allData = ()=>{
+  axios.get(`${process.env.REACT_APP_AXIOS_LINK}/all-data`).then((res)=>{
+    navigate("/all-data")
+})
+}
+
+useEffect(() => {
+  
+axios.get(`${process.env.REACT_APP_AXIOS_LINK}/`).then((res) => {
+setSlider(res.data);
+submit({target:{value:"all"}})
+}
+
+)}, [])
+
 
 
 
@@ -79,19 +95,21 @@ const openBlog = (e)=>{
           animate={{ left: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", opacity: 0 }}
         >
+          
+
           <div className="sliderbox">
             <div className="inside-container">
               <Slider
-                image1={image1}
-                image2={image2}
-                text1="Your heading here"
-                text2="Your heading here"
-                text3="Your heading here"
-                text4="Your heading here"
-                text5="Your heading here"
+                sliderData = {slider}
+                onClick={openBlog}
+                
               />
             </div>
           </div>
+
+
+
+
         </motion.div>
         <div className="categorydiv">
           <CategoryButton text="All" onClick={submit} value="all" />
@@ -111,17 +129,17 @@ const openBlog = (e)=>{
               <NewsCard
                 key={blogItem._id} // Unique key
                 // image={blogItem.image.path}
-                image={`/images/${blogItem.image.filename}`}
+                image={`/images/${blogItem.images[0].filename}`}
                 heading={blogItem.title}
                 // heading={blogItem.title}
-                para={blogItem.content}
+                para={blogItem.preview_text}
                 value={blogItem.title}
                 onClick={openBlog}
               />
               
             ))}
             {/* </div> */}
-            <NewsCard
+            {/* <NewsCard
               image={hero}
               heading="heading here"
               para="lorem ipsum the demo paragraph will e written here you can write any important data here to attract the customers"
@@ -150,11 +168,11 @@ const openBlog = (e)=>{
               image={hero}
               heading="heading here"
               para="lorem ipsum the demo paragraph will e written here you can write any important data here to attract the customers"
-            />
+            /> */}
           </div>
 
           <div className="btnbox">
-            <CategoryButton text="See More" />
+            <CategoryButton text="See More" onClick={allData}/>
           </div>
 
           <CenterHeading heading="TOP NEWS" />
@@ -166,19 +184,16 @@ const openBlog = (e)=>{
           animate={{ left: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", opacity: 0 }}
         >
-          <div className="sliderbox">
+         <div className="sliderbox">
             <div className="inside-container">
               <Slider
-                image1={image1}
-                image2={image2}
-                text1="Your heading here"
-                text2="Your heading here"
-                text3="Your heading here"
-                text4="Your heading here"
-                text5="Your heading here"
+                sliderData = {slider}
+                onClick={openBlog}
+                
               />
             </div>
           </div>
+
         </motion.div>
 
         <CenterHeading heading="RECENT" />
@@ -197,7 +212,7 @@ transition={{duration:1, ease:"easeInOut", opacity:0}}
         </div>
 </motion.div> */}
 
-        <Scroll />
+        <Scroll scrollData = {slider} onClick = {openBlog} />
 
         <Footer />
       </motion.div>

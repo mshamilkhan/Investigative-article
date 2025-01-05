@@ -1,17 +1,20 @@
 .scrollable-cards-container {
     width: 100%;
+
     overflow-x: hidden; /* Hide scrollbar */
     position: relative;
     white-space: nowrap; /* Prevent wrapping */
   }
   
   .scrollable-cards {
+    
     display: flex;
     gap: 1rem;
     animation: auto-scroll 20s linear infinite; /* Optional fallback for smoothness */
   }
   
   .NewsCard {
+    
     flex: 0 0 auto;
     width: 300px;
     border: 1px solid #ddd;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from "../../assets/images/blue1.1.png";
+import logo from "../../assets/images/Artboard 1.svg";
 import menuicon from "../../assets/images/menuicon.svg";
 import nbstyle from "./navbar.module.css";
 import { Link,Navigate, useNavigate, useParams } from "react-router-dom";

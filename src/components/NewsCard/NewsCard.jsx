@@ -13,6 +13,7 @@ export default function NewsCard({value,image, heading, para, onClick}) {
     <div className={nc.text}>
         <h2 value = {value} onClick={onClick}>{heading}</h2>
         <p value = {value} onClick={onClick}>{para}</p>
+        
     </div>
    </div>
    </>

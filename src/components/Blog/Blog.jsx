@@ -33,6 +33,10 @@ const [blogData, setBlogData] = useState({
   title: '',
   content: "",
   image: "",
+  author_name: "",
+  author_image: "",
+  date: "",
+  about_author: ""
 })//TODO
 
 
@@ -41,10 +45,16 @@ const showBlog = async () => {
     const res = await axios.get(`${process.env.REACT_APP_AXIOS_LINK}/show-blog`, {
       params: { id },
     });
+    const fetchedDate = new Date(res.data.date);
+    const isValidDate = !isNaN(fetchedDate.getTime());
     setBlogData({
       title: res.data.title,
       content: res.data.content,
-      image: res.data.image.filename,
+      image: res.data.images[0].filename,
+      author_image: res.data.author_image.filename,
+      author_name: res.data.author_name,
+      date: isValidDate ? fetchedDate.toDateString() : new Date().toDateString(),
+      about_author: res.data.about_author,
     });
     console.log(res.data);
   } catch (err) {
@@ -82,7 +92,7 @@ showBlog();
     <>
     
       <Navbar parameter="/menuopen" menuText="Menu" />
-      <AuthorTop image={author} name="Mohammad Shamil Khan" date="December 12, 2024" />
+      <AuthorTop image={`/images/${blogData.author_image}`} name={blogData.author_name} date={`${blogData.date}`} />
       <WhiteHeading heading={blogData.title} />
       <div className={blog.box112}>
         <div className={blog.articlepicture}>
@@ -93,7 +103,7 @@ showBlog();
         </div>
 
 
-        <AuthorBottom image={author} name="Mohammad Shamil Khan" date="December 12, 2024"/>
+        <AuthorBottom image={`/images/${blogData.author_image}`} name={blogData.author_name} date={blogData.date} about_author={blogData.about_author}/>
 
 
 
